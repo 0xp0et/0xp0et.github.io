@@ -41,13 +41,20 @@ const blogPosts = [
 ];
 
 // Theme Toggle
-let isDarkMode = false;
+const getCurrentTheme = () => localStorage.getItem('theme') || 'light';
+const setTheme = (theme) => {
+    localStorage.setItem('theme', theme);
+    body.setAttribute('data-theme', theme);
+    themeToggle.innerHTML = theme === 'dark' ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+};
+
+// Initialize theme
+const savedTheme = getCurrentTheme();
+setTheme(savedTheme);
+
 themeToggle.addEventListener('click', () => {
-    isDarkMode = !isDarkMode;
-    body.style.setProperty('--bg-color', isDarkMode ? '#1f2937' : '#ffffff');
-    body.style.setProperty('--text-color', isDarkMode ? '#f3f4f6' : '#1f2937');
-    body.style.setProperty('--accent-color', isDarkMode ? '#374151' : '#dbeafe');
-    themeToggle.innerHTML = isDarkMode ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+    const newTheme = getCurrentTheme() === 'dark' ? 'light' : 'dark';
+    setTheme(newTheme);
 });
 
 // Smooth Scrolling
