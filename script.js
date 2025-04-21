@@ -32,10 +32,10 @@ const blogPosts = [
         link: '#'
     },
     {
-        title: 'Blog Post 2',
-        excerpt: 'A brief excerpt from blog post 2...',
-        date: '2024-01-15',
-        link: '#'
+        title: 'Home Lab Setup',
+        excerpt: 'If you want to get into cybersecurity, nothing is more essential than collecting as many certifications as you can...',
+        date: '2025-04-15',
+        link: 'https://s3cured.hashnode.dev'
     },
     // Add more blog posts as needed
 ];
