@@ -7,37 +7,39 @@ const contactForm = document.getElementById('contact-form');
 // Sample project data - Replace with your actual projects
 const projects = [
     {
-        title: 'Project 1',
-        description: 'A brief description of project 1',
+        title: 'Security Scanner',
+        description: 'An automated vulnerability scanner for web applications with custom exploit detection.',
         image: 'https://via.placeholder.com/300x200',
-        tags: ['HTML', 'CSS', 'JavaScript'],
-        link: '#'
+        tags: ['Python', 'Security', 'Web'],
+        link: '#',
+        github: '#'
     },
     {
-        title: 'Project 2',
-        description: 'A brief description of project 2',
+        title: 'Network Monitor',
+        description: 'Real-time network traffic analysis tool with intrusion detection capabilities.',
         image: 'https://via.placeholder.com/300x200',
-        tags: ['React', 'Node.js'],
-        link: '#'
-    },
-    // Add more projects as needed
+        tags: ['C++', 'Networking', 'Security'],
+        link: '#',
+        github: '#'
+    }
 ];
 
 // Sample blog posts - Replace with your actual blog posts
 const blogPosts = [
     {
-        title: 'Blog Post 1',
-        excerpt: 'A brief excerpt from blog post 1...',
+        title: 'Understanding Buffer Overflow Attacks',
+        excerpt: 'A deep dive into buffer overflow vulnerabilities and how to exploit them...',
         date: '2024-01-01',
+        readTime: '5 min read',
         link: '#'
     },
     {
-        title: 'Home Lab Setup',
-        excerpt: 'If you want to get into cybersecurity, nothing is more essential than collecting as many certifications as you can...',
-        date: '2025-04-15',
-        link: 'https://s3cured.hashnode.dev'
-    },
-    // Add more blog posts as needed
+        title: 'Web Application Security Best Practices',
+        excerpt: 'Essential security measures every web developer should implement...',
+        date: '2024-01-15',
+        readTime: '8 min read',
+        link: '#'
+    }
 ];
 
 // Theme Toggle
@@ -97,12 +99,17 @@ function createProjectCard(project) {
     return `
         <div class="project-card" style="opacity: 0; transform: translateY(20px);">
             <img src="${project.image}" alt="${project.title}">
-            <h3>${project.title}</h3>
-            <p>${project.description}</p>
-            <div class="project-tags">
-                ${project.tags.map(tag => `<span class="skill-tag">${tag}</span>`).join('')}
+            <div class="project-content">
+                <h3>${project.title}</h3>
+                <p>${project.description}</p>
+                <div class="project-tags">
+                    ${project.tags.map(tag => `<span class="skill-tag">${tag}</span>`).join('')}
+                </div>
+                <div class="project-links">
+                    <a href="${project.link}" class="btn primary">View Project</a>
+                    ${project.github ? `<a href="${project.github}" class="btn secondary"><i class="fab fa-github"></i> Code</a>` : ''}
+                </div>
             </div>
-            <a href="${project.link}" class="btn primary">View Project</a>
         </div>
     `;
 }
@@ -114,7 +121,8 @@ function createBlogPost(post) {
             <h3>${post.title}</h3>
             <p>${post.excerpt}</p>
             <div class="blog-meta">
-                <span>${post.date}</span>
+                <span><i class="far fa-calendar"></i> ${post.date}</span>
+                <span><i class="far fa-clock"></i> ${post.readTime}</span>
             </div>
             <a href="${post.link}" class="btn secondary">Read More</a>
         </div>
