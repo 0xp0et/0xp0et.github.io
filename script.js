@@ -27,11 +27,11 @@ const projects = [
 // Sample blog posts - Replace with your actual blog posts
 const blogPosts = [
     {
-        title: 'Understanding Buffer Overflow Attacks',
-        excerpt: 'A deep dive into buffer overflow vulnerabilities and how to exploit them...',
-        date: '2024-01-01',
+        title: 'Home Lab Setup',
+        excerpt: 'An overview of setting up a home lab with Kali Linux and Windows 11 machines...',
+        date: '2025-04-15',
         readTime: '5 min read',
-        link: '#'
+        link: 'https://s3cured.hashnode.dev/home-lab-setup'
     },
     {
         title: 'Web Application Security Best Practices',
