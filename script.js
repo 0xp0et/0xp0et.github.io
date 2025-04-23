@@ -182,7 +182,7 @@ if (contactForm) {
         console.log('Form submitted:', data);
         
         // Show success message
-        alert('Thank you for your message! I will get back to you soon.');
+        alert('Thank you for your message! I will get back to you soon. Please email austinthoet@tuta.io for further inquiries.');
         contactForm.reset();
     });
 }
