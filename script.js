@@ -34,11 +34,11 @@ const blogPosts = [
         link: 'https://s3cured.hashnode.dev/home-lab-setup'
     },
     {
-        title: 'Web Application Security Best Practices',
-        excerpt: 'Essential security measures every web developer should implement...',
-        date: '2024-01-15',
-        readTime: '8 min read',
-        link: '#'
+        title: 'From YouTube to Scam Call: The Alarming Ease of Voice Cloning',
+        excerpt: 'Cloning the Italian Defence Ministers voice with Generative AI ...',
+        date: '2025-04-23',
+        readTime: '2 min read',
+        link: 'https://s3cured.hashnode.dev/gen-ai-vishing-threat'
     }
 ];
 
