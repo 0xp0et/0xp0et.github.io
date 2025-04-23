@@ -529,4 +529,69 @@ h2 {
     .section-description {
         padding: 0 1rem;
     }
+}
+
+/* Publications */
+.publications {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.publication-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+    padding: 1.2rem;
+    transition: var(--transition);
+}
+
+.publication-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.publication-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+    color: var(--text-color);
+}
+
+.publication-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.publication-date {
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+.publication-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: var(--transition);
+}
+
+.publication-link:hover {
+    opacity: 0.8;
+}
+
+/* Responsive adjustments for publications */
+@media (max-width: 768px) {
+    .publications {
+        grid-template-columns: 1fr;
+    }
+    
+    .publication-meta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
 } 
