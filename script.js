@@ -7,20 +7,18 @@ const contactForm = document.getElementById('contact-form');
 // Sample project data - Replace with your actual projects
 const projects = [
     {
-        title: 'Security Scanner',
-        description: 'An automated vulnerability scanner for web applications with custom exploit detection.',
+        title: 'Power to the Power Steering',
+        description: 'Walkthrough of a Powersteering Pump replacement.',
         image: 'https://via.placeholder.com/300x200',
-        tags: ['Python', 'Security', 'Web'],
-        link: '#',
-        github: '#'
+        tags: [],
+        link: 'https://2securityandbeyond.hashnode.dev/power-to-the-steering-pump',
     },
     {
-        title: 'Network Monitor',
-        description: 'Real-time network traffic analysis tool with intrusion detection capabilities.',
+        title: 'Coolant is not Cool',
+        description: 'Walkthrough of updates to the coolant system.',
         image: 'https://via.placeholder.com/300x200',
-        tags: ['C++', 'Networking', 'Security'],
-        link: '#',
-        github: '#'
+        tags: [],
+        link: 'https://2securityandbeyond.hashnode.dev/coolant-isnt-cool',
     }
 ];
 
